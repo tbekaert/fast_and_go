@@ -331,7 +331,7 @@ body {
   color: #000000;
   overflow-x: hidden;
   margin-bottom: 0 !important;
-  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1540,19 +1540,19 @@ textarea {
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   font-size: 1.4rem;
   line-height: 1.8rem;
-  color: #676767;
+  color: #aaaaaa;
   vertical-align: middle; }
 
 input::-ms-input-placeholder, textarea::-ms-input-placeholder {
   font-size: 1.4rem;
   line-height: 1.8rem;
-  color: #676767;
+  color: #aaaaaa;
   vertical-align: middle; }
 
 input::placeholder, textarea::placeholder {
   font-size: 1.4rem;
   line-height: 1.8rem;
-  color: #676767;
+  color: #aaaaaa;
   vertical-align: middle; }
 
 input::-webkit-input-placeholder {
@@ -2340,7 +2340,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     width: 100vw;
     padding-top: 7.8rem;
     padding-left: 25vw;
@@ -2507,7 +2507,7 @@ header {
 .hero {
   position: relative;
   padding-top: 4rem;
-  height: calc(100vh - 4.8rem); }
+  height: calc((var(--vh, 1vh) * 100) - 4.8rem); }
   @media only screen and (min-width: 641px) {
     .hero {
       padding-top: 6.4rem; } }
@@ -2732,7 +2732,10 @@ header {
       content: '';
       width: 3.2rem;
       height: 3.2rem;
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg' transform='rotate(90)'%3E%3Cpath fill='%23000000' d='m11.82 9.52a1.25 1.25 0 0 0 0 1.77l3.71 3.71-3.71 3.71a1.25 1.25 0 0 0 1.77 1.77l4.59-4.6a1.24 1.24 0 0 0 0-1.76l-4.59-4.6a1.25 1.25 0 0 0 -1.77 0z'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg' transform='translate(1, 0)'%3E%3Cpath fill='%23000000' d='m11.82 9.52a1.25 1.25 0 0 0 0 1.77l3.71 3.71-3.71 3.71a1.25 1.25 0 0 0 1.77 1.77l4.59-4.6a1.24 1.24 0 0 0 0-1.76l-4.59-4.6a1.25 1.25 0 0 0 -1.77 0z'/%3E%3C/svg%3E");
+      -webkit-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+              transform: rotate(90deg);
       -webkit-transition: -webkit-transform 500ms ease-out;
       transition: -webkit-transform 500ms ease-out;
       -o-transition: transform 500ms ease-out;
@@ -2748,9 +2751,9 @@ header {
   .desc-section .toggle:checked ~ label {
     margin-bottom: 1.6rem; }
     .desc-section .toggle:checked ~ label:after {
-      -webkit-transform: rotate(180deg);
-          -ms-transform: rotate(180deg);
-              transform: rotate(180deg); }
+      -webkit-transform: rotate(270deg);
+          -ms-transform: rotate(270deg);
+              transform: rotate(270deg); }
   .desc-section .toggle:checked ~ ul {
     max-height: var(--max-height);
     margin-bottom: 0.8rem; } }
@@ -2852,7 +2855,16 @@ header {
               transform: rotate(0deg);
       -webkit-transition-delay: 350ms;
            -o-transition-delay: 350ms;
-              transition-delay: 350ms; }
+              transition-delay: 350ms;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
     .desc-section.product .product__bullets.active:after {
       -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
               box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
@@ -2867,7 +2879,7 @@ header {
   @media only screen and (max-width: 640px) {
     .desc-section.product .product__bullets {
       position: fixed;
-      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
       width: 100vw;
       z-index: 6; } }
 
@@ -2922,7 +2934,7 @@ header {
             transition-delay: 0ms; }
     @media only screen and (max-width: 640px) {
       .desc-section.product .product__bullet.active {
-        max-height: 100vh; } }
+        max-height: calc(var(--vh, 1vh) * 100); } }
     .desc-section.product .product__bullet.active > picture {
       max-height: 32rem;
       -webkit-transition-delay: 0ms;
@@ -2967,7 +2979,8 @@ header {
     width: 100%; }
     .support__container [class*="column-"] {
       padding: 0;
-      overflow-x: scroll; }
+      overflow-x: scroll;
+      -webkit-overflow-scrolling: touch; }
   .support__list {
     max-width: initial;
     width: 100%;
