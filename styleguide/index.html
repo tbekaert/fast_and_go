@@ -1,0 +1,1041 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet"><link href="styleguide.css" rel="stylesheet">
+    <script>examples={"base":"","target":"_self","css":["https://fonts.googleapis.com/css?family=Montserrat:400,700","app.css","styleguide.css"],"js":[],"bodyjs":["bundle.min.js"],"htmlcss":"background:none;border:0;clip:auto;display:block;height:auto;margin:0;padding:0;position:static;width:auto","bodycss":"background:none;border:0;clip:auto;display:block;height:auto;margin:0;padding:10px;position:static;width:auto"};</script>
+    <script src="styleguide.min.js"></script>
+  </head>
+  <body>
+    <header class="masthead" style="background-color: #D3D3D6;">
+      <div class="container">
+        <a href="/" class="masthead-logo">
+          <img src="sg-logo.svg" alt=" " height="32">  
+        </a>
+        <nav class="masthead-nav">
+            
+                <a href="https://github.com/tbekaert/frontend_starter#readme" target="_blank">frontend_starter</a>
+            
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="columns docs-layout">
+        <div class="one-fourth column">
+          <nav class="menu docs-menu">
+            
+    
+        <a class="menu-heading" href="#typography"><span>Typography</span></a>
+        
+    
+        <a class="menu-item" href="#typo-text"><span>Text</span></a>
+        
+        
+        <a class="menu-item" href="#typo-headings"><span>Headings</span></a>
+        
+        
+        <a class="menu-item" href="#typo-list"><span>List</span></a>
+        
+        
+        <a class="menu-item" href="#typo-link"><span>Link</span></a>
+        
+        
+  
+        
+        <a class="menu-heading" href="#variables"><span>Variables</span></a>
+        
+    
+        <a class="menu-item" href="#Breakpoints"><span>Breakpoints</span></a>
+        
+        
+        <a class="menu-item" href="#Fonts"><span>Fonts</span></a>
+        
+        
+        <a class="menu-item" href="#Animation duration/easing"><span>Animation duration/easing</span></a>
+        
+        
+        <a class="menu-item" href="#Debug grid"><span>Debug grid</span></a>
+        
+        
+  
+        
+        <a class="menu-heading" href="#alert"><span>Alert</span></a>
+        
+        
+        <a class="menu-heading" href="#grid"><span>Grid</span></a>
+        
+    
+        <a class="menu-item" href="#vertical-rythmn-grid"><span>Vertical rythmn</span></a>
+        
+        
+        <a class="menu-item" href="#size-grid"><span>Grid size</span></a>
+        
+        
+  
+        
+        <a class="menu-heading" href="#others"><span>Others</span></a>
+        
+    
+        <a class="menu-item" href="#hr"><span>HR</span></a>
+        
+        
+  
+        
+        <a class="menu-heading" href="#icons"><span>Icons</span></a>
+        
+        
+        <a class="menu-heading" href="#modal"><span>Modal</span></a>
+        
+        
+        <a class="menu-heading" href="#buttons"><span>Buttons</span></a>
+        
+    
+        <a class="menu-item" href="#colors-button"><span>Colors</span></a>
+        
+        
+        <a class="menu-item" href="#disabled-button"><span>Disabled</span></a>
+        
+        
+  
+        
+        <a class="menu-heading" href="#form"><span>Form</span></a>
+        
+    
+        <a class="menu-item" href="#form-select"><span>Select</span></a>
+        
+        
+        <a class="menu-item" href="#form-textarea"><span>Textarea</span></a>
+        
+        
+        <a class="menu-item" href="#form-input-group"><span>Input group</span></a>
+        
+        
+        <a class="menu-item" href="#form-input-radio"><span>Input radio</span></a>
+        
+        
+        <a class="menu-item" href="#form-input-checkbox"><span>Input checkbox</span></a>
+        
+        
+        <a class="menu-item" href="#form-Input"><span>Input</span></a>
+        
+        
+  
+        
+        <a class="menu-heading" href="#table"><span>Table</span></a>
+        
+    
+        <a class="menu-item" href="#table-stripped"><span>Table stripped</span></a>
+        
+        
+        <a class="menu-item" href="#table-responsive"><span>Table responsive</span></a>
+        
+        
+  
+        
+        <a class="menu-heading" href="#overview"><span>Overview</span></a>
+        
+    
+        <a class="menu-item" href="#introduction"><span>Introduction</span></a>
+        
+        
+        <a class="menu-item" href="#Installation"><span>Installation</span></a>
+        
+        
+        <a class="menu-item" href="#Usage"><span>Usage</span></a>
+        
+        
+        <a class="menu-item" href="#Guidelines"><span>Guidelines</span></a>
+        
+        
+        <a class="menu-item" href="#Reset"><span>Reset</span></a>
+        
+        
+  
+        
+        <a class="menu-heading" href="#design"><span>Design</span></a>
+        
+    
+        <a class="menu-item" href="#design_colors"><span>Colors</span></a>
+        
+    
+  
+        
+        <a class="menu-item" href="#design_typographies"><span>Typographies</span></a>
+        
+        
+  
+        
+  
+          </nav>
+        </div>
+
+        <main class="three-fourths column markdown-body">
+          
+    <section id="modal">
+      <h1 class="page-title">Modal</h1>
+
+      <div class="markdown-body">
+        <pre><code class="lang-example:html">&lt;a href=&quot;#open-modal&quot; class=&quot;button yellow sm-mgv-6&quot;&gt;Open modal&lt;/a&gt;
+
+&lt;div class=&quot;modal&quot; id=&quot;open-modal&quot; aria-hidden=&quot;true&quot;&gt;
+  &lt;div class=&quot;modal--inner row&quot;&gt;
+    &lt;a href=&quot;#x&quot; class=&quot;modal--close&quot; aria-hidden=&quot;true&quot;&gt;
+      &lt;svg class=&quot;icon black&quot;&gt;&lt;use xlink:href=&quot;#icon-close&quot;/&gt;&lt;/svg&gt;
+    &lt;/a&gt;
+    &lt;div class=&quot;column-12&quot;&gt;
+      &lt;span class=&quot;h2 modal--title&quot;&gt;Modal Title&lt;/span&gt;
+      &lt;div class=&quot;modal--scroll row flex-fill&quot;&gt;
+        &lt;div class=&quot;column-12&quot;&gt;
+          &lt;p&gt;
+            This is a modal
+          &lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+    <section id="typography">
+      <h1 class="page-title">Typography</h1>
+
+      <div class="markdown-body">
+        
+        
+    <section id="typo-text">
+      <h2 class="page-title">Text</h2>
+
+      <div class="markdown-body">
+        <pre><code class="lang-example:html">&lt;p&gt;
+The breath is a quill. This could be, or perhaps a septate cast is an anthony of the mind. A globose desk without deer is truly a cornet of nerval postages. Authors often misinterpret the capricorn as an unsight snake, when in actuality it feels more like an irate.
+&lt;/p&gt;
+&lt;p class=&quot;bold&quot;&gt;
+  The breath is a quill. This could be, or perhaps a septate cast is an anthony of the mind. A globose desk without deer is truly a cornet of nerval postages. Authors often misinterpret the capricorn as an unsight snake, when in actuality it feels more like an irate.
+&lt;/p&gt;
+&lt;p class=&quot;italic&quot;&gt;
+  The breath is a quill. This could be, or perhaps a septate cast is an anthony of the mind. A globose desk without deer is truly a cornet of nerval postages. Authors often misinterpret the capricorn as an unsight snake, when in actuality it feels more like an irate.
+&lt;/p&gt;
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+    <section id="typo-headings">
+      <h2 class="page-title">Headings</h2>
+
+      <div class="markdown-body">
+        <pre><code class="lang-example:html">&lt;h1 class=&quot;no-margin uppercase&quot;&gt;Maxi title&lt;/h1&gt;
+&lt;h1 class=&quot;sub&quot;&gt;Sous-titre principal&lt;/h1&gt;
+
+&lt;h2 class=&quot;no-margin sub&quot;&gt;Sous-titre de second niveau&lt;/h2&gt;
+&lt;h2 class=&quot;uppercase&quot;&gt;Big title&lt;/h2&gt;
+
+&lt;h3 class=&quot;no-margin uppercase&quot;&gt;Medium title&lt;/h3&gt;
+&lt;h3 class=&quot;sub&quot;&gt;Sous-titre de troisième niveau&lt;/h3&gt;
+
+&lt;h4 class=&quot;no-margin uppercase&quot;&gt;Small title&lt;/h4&gt;
+&lt;h4 class=&quot;sub&quot;&gt;Sous-titre de quatrième niveau&lt;/h4&gt;
+
+&lt;h5 class=&quot;uppercase&quot;&gt;Mini title&lt;/h5&gt;
+
+&lt;h6 class=&quot;sub&quot;&gt;Subtitle of all titles&lt;/h6&gt;
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+    <section id="typo-list">
+      <h2 class="page-title">List</h2>
+
+      <div class="markdown-body">
+        <pre><code class="lang-example:html">&lt;ul&gt;
+  &lt;li&gt;Lorem ipsum dolor sit&lt;/li&gt;
+  &lt;li&gt;
+    Lorem ipsum dolor sit
+    &lt;ul&gt;
+      &lt;li&gt;Consectetur&lt;/li&gt;
+      &lt;li&gt;Consectetur&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Lorem ipsum dolor sit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+  &lt;li&gt;Lorem ipsum dolor sit&lt;/li&gt;
+  &lt;li&gt;
+    Lorem ipsum dolor sit
+    &lt;ol&gt;
+      &lt;li&gt;Consectetur&lt;/li&gt;
+      &lt;li&gt;Consectetur&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Lorem ipsum dolor sit&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul class=&quot;no-bullet&quot;&gt;
+  &lt;li&gt;Lorem ipsum dolor sit&lt;/li&gt;
+  &lt;li&gt;Lorem ipsum dolor sit&lt;/li&gt;
+  &lt;li&gt;Lorem ipsum dolor sit&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+    <section id="typo-link">
+      <h2 class="page-title">Link</h2>
+
+      <div class="markdown-body">
+        <p>▲
+▲ ▲</p>
+<pre><code class="lang-example:html">&lt;p&gt;
+  &lt;a href=&quot;#x&quot; class=&quot;link-header&quot;&gt;link header&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;a href=&quot;#x&quot; class=&quot;link-footer&quot;&gt;link footer&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;a href=&quot;#x&quot; class=&quot;link-menu&quot;&gt;Lien du&lt;/br&gt;&lt;span&gt;menu&lt;/span&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;a href=&quot;#x&quot;&gt;link default&lt;/a&gt;
+&lt;/p&gt;
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+      </div>
+    </section>
+    
+    <section id="alert">
+      <h1 class="page-title">Alert</h1>
+
+      <div class="markdown-body">
+        <p>Alert can have different colors:</p>
+<pre><code class="lang-example:html">  &lt;div class=&quot;alert-box success&quot;&gt;
+    &lt;p class=&quot;no-margin&quot;&gt;This is a success alert&lt;/p&gt;
+    &lt;a href=&quot;#x&quot; class=&quot;alert-box--close&quot;&gt;&lt;svg class=&quot;icon small black&quot;&gt;&lt;use xlink:href=&quot;#icon-close&quot; /&gt;&lt;/svg&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;alert-box warning&quot;&gt;
+    &lt;p class=&quot;no-margin&quot;&gt;This is a warning alert&lt;/p&gt;
+    &lt;a href=&quot;#x&quot; class=&quot;alert-box--close&quot;&gt;&lt;svg class=&quot;icon small gray-darker&quot;&gt;&lt;use xlink:href=&quot;#icon-close&quot; /&gt;&lt;/svg&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;alert-box info&quot;&gt;
+    &lt;p class=&quot;no-margin&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
+    &lt;a href=&quot;#x&quot; class=&quot;alert-box--close&quot;&gt;&lt;svg class=&quot;icon small white&quot;&gt;&lt;use xlink:href=&quot;#icon-close&quot; /&gt;&lt;/svg&gt;&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;alert-box alert&quot;&gt;
+    &lt;p class=&quot;no-margin&quot;&gt;This is an alert alert ¯\_(ツ)_/¯&lt;/p&gt;
+    &lt;a href=&quot;#x&quot; class=&quot;alert-box--close&quot;&gt;&lt;svg class=&quot;icon small white&quot;&gt;&lt;use xlink:href=&quot;#icon-close&quot; /&gt;&lt;/svg&gt;&lt;/a&gt;
+  &lt;/div&gt;
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+    <section id="grid">
+      <h1 class="page-title">Grid</h1>
+
+      <div class="markdown-body">
+        
+        
+    <section id="vertical-rythmn-grid">
+      <h2 class="page-title">Vertical rythmn</h2>
+
+      <div class="markdown-body">
+        <p>Use <code>$vr</code> in order to keep vertical rythmn accross the entire project.</p>
+<pre><code>  $vr: 2rem;
+</code></pre>
+        
+      </div>
+    </section>
+    
+    <section id="size-grid">
+      <h2 class="page-title">Grid size</h2>
+
+      <div class="markdown-body">
+        <pre><code>  $row-width: 144rem;
+  $container-width: 100%;
+  $total-columns: 12;
+  $column-gutter: 4rem;
+  $column-width: 8rem;
+</code></pre>
+        
+      </div>
+    </section>
+    
+      </div>
+    </section>
+    
+    <section id="others">
+      <h1 class="page-title">Others</h1>
+
+      <div class="markdown-body">
+        
+        
+    <section id="hr">
+      <h2 class="page-title">HR</h2>
+
+      <div class="markdown-body">
+        <pre><code class="lang-example:html">&lt;hr&gt;
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+      </div>
+    </section>
+    
+    <section id="icons">
+      <h1 class="page-title">Icons</h1>
+
+      <div class="markdown-body">
+        <pre><code class="lang-example:html">&lt;div&gt;
+  &lt;svg class=&quot;icon big&quot;&gt;&lt;use xlink:href=&quot;#icon-account&quot; /&gt;&lt;/svg&gt;
+  &lt;svg class=&quot;icon big&quot;&gt;&lt;use xlink:href=&quot;#icon-arrow_down&quot; /&gt;&lt;/svg&gt;
+  &lt;svg class=&quot;icon big&quot;&gt;&lt;use xlink:href=&quot;#icon-arrow_left_slider&quot; /&gt;&lt;/svg&gt;
+  &lt;svg class=&quot;icon big&quot;&gt;&lt;use xlink:href=&quot;#icon-arrow_right_slider&quot; /&gt;&lt;/svg&gt;
+  &lt;svg class=&quot;icon big&quot;&gt;&lt;use xlink:href=&quot;#icon-cart&quot; /&gt;&lt;/svg&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;svg class=&quot;icon small alert&quot;&gt;&lt;use xlink:href=&quot;#icon-close&quot; /&gt;&lt;/svg&gt;
+  &lt;svg class=&quot;icon warning&quot;&gt;&lt;use xlink:href=&quot;#icon-in_progress&quot; /&gt;&lt;/svg&gt;
+  &lt;svg class=&quot;icon big info&quot;&gt;&lt;use xlink:href=&quot;#icon-phone&quot; /&gt;&lt;/svg&gt;
+  &lt;svg class=&quot;icon big success&quot;&gt;&lt;use xlink:href=&quot;#icon-favoris&quot; /&gt;&lt;/svg&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;svg class=&quot;icon big gray-lighter&quot;&gt;&lt;use xlink:href=&quot;#icon-close&quot; /&gt;&lt;/svg&gt;
+  &lt;svg class=&quot;icon big gray-light&quot;&gt;&lt;use xlink:href=&quot;#icon-close&quot; /&gt;&lt;/svg&gt;
+  &lt;svg class=&quot;icon big gray&quot;&gt;&lt;use xlink:href=&quot;#icon-close&quot; /&gt;&lt;/svg&gt;
+  &lt;svg class=&quot;icon big gray-dark&quot;&gt;&lt;use xlink:href=&quot;#icon-close&quot; /&gt;&lt;/svg&gt;
+  &lt;svg class=&quot;icon big gray-darker&quot;&gt;&lt;use xlink:href=&quot;#icon-close&quot; /&gt;&lt;/svg&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;span class=&quot;icon-bg close-yellow small&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;icon-bg close-black&quot;&gt;&lt;/span&gt;
+  &lt;span class=&quot;icon-bg close-alert big&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+    <section id="variables">
+      <h1 class="page-title">Variables</h1>
+
+      <div class="markdown-body">
+        
+        
+    <section id="Breakpoints">
+      <h2 class="page-title">Breakpoints</h2>
+
+      <div class="markdown-body">
+        <p>We have 3 main breakpoints based on Foundation and usefull in mobile first development.</p>
+<p>  <code>$sm</code> is used for style for mobile, tablet and desktop (equals to no media query)</p>
+<p>  <code>$md</code> is used for style for tablet and desktop <code>(min-width: 641px)</code></p>
+<p>  <code>$lg</code> is used for style for desktop only <code>(min-width: 1025px)</code></p>
+
+        
+      </div>
+    </section>
+    
+    <section id="Fonts">
+      <h2 class="page-title">Fonts</h2>
+
+      <div class="markdown-body">
+        <p>Variables containing project fonts</p>
+<pre><code>  $ff-text: &#39;Montserrat&#39;, sans-serif;
+</code></pre>
+        
+      </div>
+    </section>
+    
+    <section id="Animation duration/easing">
+      <h2 class="page-title">Animation duration/easing</h2>
+
+      <div class="markdown-body">
+        <p>Use this for animation timing and easing. You can either use the shorthand <code>$anim</code> or directly use <code>$anim-duration</code> and <code>$anim-easing</code> for fine tuning.</p>
+<pre><code>  $anim-duration: 250ms;
+  $anim-easing: cubic-bezier(.55,0,.1,1) ;
+  $anim: $anim-duration $anim-easing;
+</code></pre>
+        
+      </div>
+    </section>
+    
+    <section id="Debug grid">
+      <h2 class="page-title">Debug grid</h2>
+
+      <div class="markdown-body">
+        <p>Update this scss map to configure debgrid in order to display overlay debug grid in your project.</p>
+<pre><code>  $debgrid: (
+    horizontal: false,
+    maxwidth: $row-width,
+    width: $container-width,
+    columns: $total-columns,
+    gutter: $column-gutter,
+    colorColumn: rgba(clr(gray-darker), 0.1),
+    colorGutter: rgba(clr(gray-darker), 0.05),
+    vertical: false,
+    vertical-size: $vr,
+    colorVOdd: rgba(clr(gray-darker), 0.1),
+    colorVEven: transparent
+  );
+</code></pre>
+        
+      </div>
+    </section>
+    
+      </div>
+    </section>
+    
+    <section id="buttons">
+      <h1 class="page-title">Buttons</h1>
+
+      <div class="markdown-body">
+        
+        
+    <section id="colors-button">
+      <h2 class="page-title">Colors</h2>
+
+      <div class="markdown-body">
+        <p>Button styles can be applied to any element (excepted <code>.tertiary</code> wich can&#39;t be used with self-closing HTML attributes like input).
+  Typically you&#39;ll want to use either a <code>&lt;button&gt;</code> or an <code>&lt;a&gt;</code> element:</p>
+<pre><code class="lang-example:html">  &lt;button class=&quot;button yellow&quot;&gt;Button yellow&lt;/button&gt;
+  &lt;a class=&quot;button black&quot; href=&quot;#x&quot;&gt;Button black&lt;/a&gt;
+  &lt;button class=&quot;button white&quot;&gt;Button tertiary&lt;/button&gt;
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+    <section id="disabled-button">
+      <h2 class="page-title">Disabled</h2>
+
+      <div class="markdown-body">
+        <p>Buttons can also be used as call to action:</p>
+<pre><code class="lang-example:html">  &lt;button class=&quot;button cta disabled&quot;&gt;Button cta&lt;/button&gt;
+  &lt;button class=&quot;button yellow disabled&quot;&gt;Button yellow&lt;/button&gt;
+  &lt;a class=&quot;button black disabled&quot; href=&quot;#x&quot;&gt;Button black&lt;/a&gt;
+  &lt;a class=&quot;button tertiary disabled&quot; href=&quot;#x&quot;&gt;Button tertiary&lt;/a&gt;
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+      </div>
+    </section>
+    
+    <section id="form">
+      <h1 class="page-title">Form</h1>
+
+      <div class="markdown-body">
+        
+        
+    <section id="form-select">
+      <h2 class="page-title">Select</h2>
+
+      <div class="markdown-body">
+        <pre><code class="lang-example:html">&lt;label for=&quot;select1&quot;&gt;
+  Select label
+  &lt;select class=&quot;&quot; name=&quot;select&quot; id=&quot;select1&quot;&gt;
+    &lt;option value=&quot;1&quot;&gt;Select option&lt;/option&gt;
+    &lt;option value=&quot;2&quot;&gt;Select option&lt;/option&gt;
+    &lt;option value=&quot;3&quot;&gt;Select option&lt;/option&gt;
+    &lt;option value=&quot;4&quot;&gt;Select option&lt;/option&gt;
+    &lt;option value=&quot;5&quot;&gt;Select option&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/label&gt;
+&lt;label for=&quot;select2&quot;&gt;
+  Select label
+  &lt;select class=&quot;&quot; name=&quot;select&quot; id=&quot;select2&quot; disabled&gt;
+    &lt;option value=&quot;1&quot;&gt;Select option&lt;/option&gt;
+    &lt;option value=&quot;2&quot;&gt;Select option&lt;/option&gt;
+    &lt;option value=&quot;3&quot;&gt;Select option&lt;/option&gt;
+    &lt;option value=&quot;4&quot;&gt;Select option&lt;/option&gt;
+    &lt;option value=&quot;5&quot;&gt;Select option&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/label&gt;
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+    <section id="form-textarea">
+      <h2 class="page-title">Textarea</h2>
+
+      <div class="markdown-body">
+        <pre><code class="lang-example:html">&lt;label for=&quot;textarea&quot;&gt;
+  Textarea label
+  &lt;textarea name=&quot;textarea&quot; id=&quot;textarea&quot; placeholder=&quot;Textarea placeholder&quot;&gt;&lt;/textarea&gt;
+&lt;/label&gt;
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+    <section id="form-input-group">
+      <h2 class="page-title">Input group</h2>
+
+      <div class="markdown-body">
+        <pre><code class="lang-example:html">&lt;label for=&quot;input-group&quot; class=&quot;input-group&quot;&gt;
+  Group input
+  &lt;div class=&quot;input-group--inner&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;input-group&quot; id=&quot;input-group&quot; value=&quot;&quot; placeholder=&quot;input placeholder&quot; id=&quot;input-group&quot;&gt;
+    &lt;button type=&quot;submit&quot; name=&quot;button&quot; class=&quot;button black&quot;&gt;OK&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/label&gt;
+&lt;label for=&quot;input-group-disabled&quot; class=&quot;input-group&quot;&gt;
+  Group input disabled
+  &lt;div class=&quot;input-group--inner&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;input-group&quot; id=&quot;input-group-disabled&quot; value=&quot;&quot; placeholder=&quot;input placeholder&quot; id=&quot;input-group&quot; disabled&gt;
+    &lt;button type=&quot;submit&quot; name=&quot;button&quot; class=&quot;button black disabled&quot;&gt;OK&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/label&gt;
+
+&lt;label for=&quot;input-group_search&quot; class=&quot;input-group search&quot;&gt;
+  &lt;div class=&quot;input-group--inner&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;input-group&quot; value=&quot;&quot; placeholder=&quot;Rechercher un produit&quot; id=&quot;input-group_search&quot;&gt;
+    &lt;button type=&quot;submit&quot; name=&quot;button&quot; class=&quot;button black&quot;&gt;
+      &lt;svg class=&quot;icon&quot;&gt;&lt;use xlink:href=&quot;#icon-search&quot; /&gt;&lt;/svg&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/label&gt;
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+    <section id="form-input-radio">
+      <h2 class="page-title">Input radio</h2>
+
+      <div class="markdown-body">
+        <pre><code class="lang-example:html">&lt;div class=&quot;&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;radio&quot; value=&quot;1&quot; id=&quot;radio1&quot;&gt;
+  &lt;label for=&quot;radio1&quot;&gt;
+    Radio option
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;radio&quot; value=&quot;2&quot; id=&quot;radio2&quot; checked&gt;
+  &lt;label for=&quot;radio2&quot;&gt;
+    Radio option
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;radio-disabled&quot; value=&quot;2&quot; id=&quot;radio2&quot; disabled&gt;
+  &lt;label for=&quot;radio2&quot;&gt;
+    Radio option
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;&quot;&gt;
+  &lt;input type=&quot;radio&quot; name=&quot;radio-disabled&quot; value=&quot;3&quot; id=&quot;radio3&quot; checked disabled&gt;
+  &lt;label for=&quot;radio3&quot;&gt;
+    Radio option
+  &lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+    <section id="form-input-checkbox">
+      <h2 class="page-title">Input checkbox</h2>
+
+      <div class="markdown-body">
+        <pre><code class="lang-example:html">&lt;div class=&quot;&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot; value=&quot;1&quot; id=&quot;checkbox1&quot;&gt;
+  &lt;label for=&quot;checkbox1&quot;&gt;
+    Checkbox option
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot; value=&quot;2&quot; id=&quot;checkbox2&quot; checked&gt;
+  &lt;label for=&quot;checkbox2&quot;&gt;
+    Checkbox option
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot; value=&quot;3&quot; id=&quot;checkbox3&quot; disabled&gt;
+  &lt;label for=&quot;checkbox3&quot;&gt;
+    Checkbox option
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div class=&quot;&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot; value=&quot;4&quot; id=&quot;checkbox4&quot; checked disabled&gt;
+  &lt;label for=&quot;checkbox4&quot;&gt;
+    Checkbox option
+  &lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+    <section id="form-Input">
+      <h2 class="page-title">Input</h2>
+
+      <div class="markdown-body">
+        <pre><code class="lang-example:html">&lt;label for=&quot;input-error&quot; class=&quot;error&quot; data-error=&quot;Error message&quot;&gt;
+  Input label
+  &lt;input type=&quot;text&quot; name=&quot;input&quot; value=&quot;Content added&quot; id=&quot;input-error&quot;&gt;
+&lt;/label&gt;
+&lt;label for=&quot;input&quot;&gt;
+  Input label
+  &lt;input type=&quot;text&quot; name=&quot;input&quot; value=&quot;&quot; id=&quot;input&quot; placeholder=&quot;Input placeholder&quot;&gt;
+&lt;/label&gt;
+&lt;label for=&quot;input-value&quot;&gt;
+  Input label
+  &lt;input type=&quot;text&quot; name=&quot;input&quot; value=&quot;Content added&quot; id=&quot;input-value&quot;&gt;
+&lt;/label&gt;
+&lt;label for=&quot;input-disabled&quot;&gt;
+  Input label
+  &lt;input type=&quot;text&quot; name=&quot;input&quot; value=&quot;I am disabled&quot; id=&quot;input-disabled&quot; disabled&gt;
+&lt;/label&gt;
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+      </div>
+    </section>
+    
+    <section id="table">
+      <h1 class="page-title">Table</h1>
+
+      <div class="markdown-body">
+        
+        
+    <section id="table-stripped">
+      <h2 class="page-title">Table stripped</h2>
+
+      <div class="markdown-body">
+        <p>Tables can be stripped</p>
+<pre><code class="lang-example:html">&lt;table class=&quot;stripped&quot;&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Col 1&lt;/td&gt;
+    &lt;td&gt;&lt;a href=&quot;#x&quot;&gt;Col 2&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Col 1&lt;/td&gt;
+    &lt;td&gt;Col 2&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Col 1&lt;/td&gt;
+    &lt;td&gt;Col 2&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Col 1&lt;/td&gt;
+    &lt;td&gt;Col 2&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Col 1&lt;/td&gt;
+    &lt;td&gt;Col 2&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Col 1&lt;/td&gt;
+    &lt;td&gt;Col 2&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+    <section id="table-responsive">
+      <h2 class="page-title">Table responsive</h2>
+
+      <div class="markdown-body">
+        <p>But they can be responsive too =D</p>
+<pre><code class="lang-example:html">&lt;table class=&quot;responsive&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Col 1&lt;/th&gt;
+      &lt;th&gt;Col 2&lt;/th&gt;
+      &lt;th class=&quot;table-responsive-hide&quot;&gt;Hidden on small&lt;/th&gt;
+      &lt;th&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Col 1&lt;/td&gt;
+      &lt;td&gt;Col 2&lt;/td&gt;
+      &lt;td&gt;Header hidden on small&lt;/td&gt;
+      &lt;td&gt;No header&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Col 1&lt;/td&gt;
+      &lt;td&gt;Col2&lt;/td&gt;
+
+      &lt;td&gt;Header hidden on small&lt;/td&gt;
+      &lt;td&gt;No header&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Col 1&lt;/td&gt;
+      &lt;td&gt;Col 2&lt;/td&gt;
+
+      &lt;td&gt;Header hidden on small&lt;/td&gt;
+      &lt;td&gt;No header&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Col 1&lt;/td&gt;
+      &lt;td&gt;Col 2&lt;/td&gt;
+
+      &lt;td&gt;Header hidden on small&lt;/td&gt;
+      &lt;td&gt;No header&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Col 1&lt;/td&gt;
+      &lt;td&gt;Col 2&lt;/td&gt;
+
+      &lt;td&gt;Header hidden on small&lt;/td&gt;
+      &lt;td&gt;No header&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Col 1&lt;/td&gt;
+      &lt;td&gt;Col 2&lt;/td&gt;
+
+      &lt;td&gt;Header hidden on small&lt;/td&gt;
+      &lt;td&gt;No header&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;th colspan=&quot;4&quot;&gt;The footer&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+      </div>
+    </section>
+    
+    <section id="overview">
+      <h1 class="page-title">Overview</h1>
+
+      <div class="markdown-body">
+        
+        
+    <section id="introduction">
+      <h2 class="page-title">Introduction</h2>
+
+      <div class="markdown-body">
+        <h3 id="welcome-on-this-styleguide-">Welcome on this styleguide!</h3>
+<p>  This document is create dynamicaly using the project styles.</p>
+<p>  It contains all you need to use and extend the front-end od this project.</p>
+<p>  Feel free to use it as a support poage when building the front-end of this project.</p>
+
+        
+      </div>
+    </section>
+    
+    <section id="Installation">
+      <h2 class="page-title">Installation</h2>
+
+      <div class="markdown-body">
+        <p>In order to install front end starter, just run <code>npm install</code> after cloning it.</p>
+<p>  We recommand using <a href="https://github.com/creationix/nvm">nvm</a> to handle version switching to the one this project is using.</p>
+
+        
+      </div>
+    </section>
+    
+    <section id="Usage">
+      <h2 class="page-title">Usage</h2>
+
+      <div class="markdown-body">
+        <p>Usage</p>
+
+        
+      </div>
+    </section>
+    
+    <section id="Guidelines">
+      <h2 class="page-title">Guidelines</h2>
+
+      <div class="markdown-body">
+        <p>Guidelines</p>
+
+        
+      </div>
+    </section>
+    
+    <section id="Reset">
+      <h2 class="page-title">Reset</h2>
+
+      <div class="markdown-body">
+        <p>Reset</p>
+
+        
+      </div>
+    </section>
+    
+      </div>
+    </section>
+    
+    <section id="design">
+      <h1 class="page-title">Design</h1>
+
+      <div class="markdown-body">
+        
+        
+    <section id="design_colors">
+      <h2 class="page-title">Colors</h2>
+
+      <div class="markdown-body">
+        <p>In order to use any color in an <code>.scss</code> file, just use function <code>clr(name-of-color)</code></p>
+
+        
+    <section id="brand-colors">
+      <h3 class="page-title">Brand</h3>
+
+      <div class="markdown-body">
+        <pre><code class="lang-example:color">  line 2
+  @color: #ffcc00 @name: yellow
+  @color: #000000 @name: black
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+    <section id="gray-colors">
+      <h3 class="page-title">Gray</h3>
+
+      <div class="markdown-body">
+        <pre><code class="lang-example:color">  line 3
+  @color: #dfdfdf @name: gray-dark
+  @color: #f4f4f4 @name: gray
+  @color: #ffffff @name: white
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+    <section id="class-colors">
+      <h3 class="page-title">Class</h3>
+
+      <div class="markdown-body">
+        <pre><code class="lang-example:html">    &lt;p class=&quot;text-yellow h-text-yellow-dark&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque eligendi, iste neque deserunt, dignissimos officia in dolore, itaque dicta incidunt id nulla at blanditiis voluptatibus veniam omnis. At, quos!&lt;/p&gt;
+    &lt;p class=&quot;bg-black h-bg-black-dark&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque eligendi, iste neque deserunt, dignissimos officia in dolore, itaque dicta incidunt id nulla at blanditiis voluptatibus veniam omnis. At, quos!&lt;/p&gt;
+    &lt;p class=&quot;bd-1-alert&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque eligendi, iste neque deserunt, dignissimos officia in dolore, itaque dicta incidunt id nulla at blanditiis voluptatibus veniam omnis. At, quos!&lt;/p&gt;
+    &lt;p class=&quot;bdb-1-success&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque eligendi, iste neque deserunt, dignissimos officia in dolore, itaque dicta incidunt id nulla at blanditiis voluptatibus veniam omnis. At, quos!&lt;/p&gt;
+</code></pre>
+
+        
+      </div>
+    </section>
+    
+      </div>
+    </section>
+    
+    <section id="design_typographies">
+      <h2 class="page-title">Typographies</h2>
+
+      <div class="markdown-body">
+        
+        
+      </div>
+    </section>
+    
+      </div>
+    </section>
+    
+        </main>
+      </div>
+      <footer class="footer">
+        Last modified Friday, 4 January 2019 16:43
+      </footer>
+    </div>
+    <script src="prism.js?871234"></script>
+    <script src="examples.js?873428"></script>
+    <script src="script.js?02359872"></script>
+    <script src="anchor.min.js?225234"></script>
+    <script src="interact.min.js?8552934"></script>
+    <script>
+     anchors.options = {
+         placement: 'left',
+         visible: 'hover',
+         class: 'anchor-link'
+     };
+     anchors.add('h2, h3');
+
+     /* interact('.docs-resize')
+      *   .resizable({
+      *     edges: {
+      *       left: '.c-resize--left',
+      *       right: '.c-resize--right',
+      *       bottom: false,
+      *       top: false
+      *     },
+      *     onmove: function (e) {
+      *       var width = e.rect.width,
+      *         windowWidth = $(window).width();
+
+      *       if (width < 160) {
+      *         width = 160;
+      *       } else if ((width * 2) + 100 > windowWidth) {
+      *         width = (windowWidth - 100) / 2;
+      *       }
+
+      *       $('.docs-example').find('docs-resize').addClass('resize-overlay');
+      *       $('.docs-resize').style.width = (width * 2) + 'px';
+      *     },
+      *     onend: function () {
+      *       $('.docs-example').find('docs-resize').removeClass('resize-overlay');
+      *     }
+      *   })
+      *   .on('resizemove', function (event) {
+      *     var target = event.target,
+      *         x = (parseFloat(target.getAttribute('data-x')) || 0);
+
+      *     // update the element's style
+      *     target.style.width  = event.rect.width + 'px';
+
+      *     // translate when resizing from top or left edges
+      *     x += event.deltaRect.left;
+
+      *     target.style.webkitTransform = target.style.transform =
+      *       'translateX(' + x + 'px)';
+
+      *     target.setAttribute('data-x', x);
+      *     target.textContent = Math.round(event.rect.width);
+      *   });*/
+    </script>
+    
+  
+  </body>
+</html>
+
+
