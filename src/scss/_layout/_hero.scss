@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   padding-top: $vr*5;
-  height: calc(100vh - #{$vr*6});
+  height: calc((var(--vh, 1vh) * 100) - #{$vr*6});
 
   @media #{$md} {
     padding-top: $vr*8;

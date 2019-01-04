@@ -17,7 +17,8 @@
         content: '';
         width: $vr*4;
         height: $vr*4;
-        background-image: svg-inline(arrow-down);
+        background-image: svg-inline(arrow-right);
+        transform: rotate(90deg);
         transition: transform 500ms ease-out;
       }
 
@@ -34,7 +35,7 @@
         margin-bottom: $vr*2;
 
         &:after {
-          transform: rotate(180deg);
+          transform: rotate(270deg);
         }
       }
 
@@ -132,6 +133,9 @@
           opacity: 1;
           transform: rotate(0deg);
           transition-delay: 350ms;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
 
         &:after {
@@ -144,7 +148,7 @@
 
       @media #{$sm-only} {
         position: fixed;
-        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
         width: 100vw;
         z-index: 6;
       }
@@ -190,7 +194,7 @@
         transition-delay: 0ms;
 
         @media #{$sm-only} {
-          max-height: 100vh;
+          max-height: calc(var(--vh, 1vh) * 100);
         }
 
         >picture {

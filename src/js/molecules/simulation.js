@@ -48,7 +48,12 @@ export default (({
       $.simulation_container.classList.remove('show');
       $.keg_number.focus();
     }
-    shouldShowResults = !shouldShowResults
+    shouldShowResults = !shouldShowResults;
+    window.scrollBy({
+      top: document.querySelector('#simulation').offsetTop - window.scrollY - document.querySelector('body > header').scrollHeight,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 
   $.simulation_container.addEventListener('submit', handleClick);

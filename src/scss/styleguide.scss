@@ -91,7 +91,7 @@ header {
   flex-direction: column;
   width: 25vw;
   max-width: 30rem;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   border-right: 1px solid var(--oc-gray-2);
 
   .logo {
@@ -203,7 +203,7 @@ footer {
 }
 
 main {
-  max-height: 100vh;
+  max-height: calc(var(--vh, 1vh) * 100);
   overflow-y: scroll;
   padding: 0;
   display: flex;
@@ -222,7 +222,7 @@ main {
     width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     padding: 0 4rem;
 
     &::-webkit-scrollbar {
