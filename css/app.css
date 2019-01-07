@@ -9184,6 +9184,8 @@ header {
     -webkit-transition-delay: 250ms;
          -o-transition-delay: 250ms;
             transition-delay: 250ms; }
+    .desc-section.product .product__bullet > picture img {
+      width: 100%; }
   .desc-section.product .product__bullet h3,
   .desc-section.product .product__bullet p {
     -webkit-transform: translateY(2rem);
