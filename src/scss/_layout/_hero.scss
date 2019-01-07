@@ -5,6 +5,7 @@
 
   @media #{$md} {
     padding-top: $vr*8;
+    height: calc((var(--vh, 1vh) * 100) - #{$vr*12});
   }
 
   &:before {

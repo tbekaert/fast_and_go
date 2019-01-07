@@ -1,7 +1,7 @@
 .team {
   @media #{$sm-only} {
-    img+* {
-      transform: translateY(- $vr*3);
+    picture+* {
+      transform: translateY(- $vr*2.5);
     }
   }
 }
