@@ -659,7 +659,7 @@ a, .link, [data-fl] {
     margin: 0;
     color: #ffffff;
     font-size: 2.4rem;
-    line-height: 6rem;
+    line-height: 5.6rem;
     font-weight: 700;
     text-decoration: none; }
     a.link-header:after, .link.link-header:after, [data-fl].link-header:after {
@@ -1170,7 +1170,7 @@ section: typography
   .mgv-4 {
     margin-top: 3.2rem;
     margin-bottom: 3.2rem; }
-  .mgt-4, .sm-mgt-4 {
+  .sm-mgt-4 {
     margin-top: 3.2rem; }
   .sm-mgr-4 {
     margin-right: 3.2rem; }
@@ -1184,6 +1184,9 @@ section: typography
     margin-bottom: 2.4rem; }
   .pg-3, .sm-pg-3 {
     padding: 2.4rem; }
+  .sm-pgv-3 {
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem; }
   .pgh-3 {
     padding-right: 2.4rem;
     padding-left: 2.4rem; }
@@ -1195,7 +1198,7 @@ section: typography
     margin-top: 1.6rem; }
   .mgb-2, .sm-mgb-2 {
     margin-bottom: 1.6rem; }
-  .pg-2, .sm-pg-2 {
+  .pg-2 {
     padding: 1.6rem; }
   .pgh-2, .sm-pgh-2 {
     padding-right: 1.6rem;
@@ -1209,6 +1212,8 @@ section: typography
     padding-left: 0.8rem; }
   .sm-pgt-1 {
     padding-top: 0.8rem; }
+  .sm-pgr-1 {
+    padding-right: 0.8rem; }
   .sm-pgb-1 {
     padding-bottom: 0.8rem; }
   .sm-pgh-0 {
@@ -1775,7 +1780,8 @@ section: form
 ```
 */
 input[type="checkbox"] + label:before {
-  border-radius: 0.4rem; }
+  border-radius: 0.4rem;
+  border-color: #dfdfdf; }
 
 input[type="checkbox"] + label:after {
   left: 0;
@@ -2342,7 +2348,7 @@ header {
     left: 0;
     height: calc(var(--vh, 1vh) * 100);
     width: 100vw;
-    padding-top: 7.8rem;
+    padding-top: 4.8rem;
     padding-left: 25vw;
     pointer-events: none; }
     nav:before, nav:after {
@@ -2396,8 +2402,8 @@ header {
       will-change: transform; }
     nav .nav-trigger {
       position: fixed;
-      top: 2.6rem;
-      right: 1.2rem;
+      top: calc(1.6rem - (var(--step) * 0.8rem));
+      right: 1.6rem;
       z-index: 1;
       opacity: 0;
       -webkit-transform: rotate(0deg);
@@ -2510,7 +2516,8 @@ header {
   height: calc((var(--vh, 1vh) * 100) - 4.8rem); }
   @media only screen and (min-width: 641px) {
     .hero {
-      padding-top: 6.4rem; } }
+      padding-top: 6.4rem;
+      height: calc((var(--vh, 1vh) * 100) - 9.6rem); } }
   .hero:before {
     content: '';
     position: absolute;
@@ -2676,14 +2683,14 @@ header {
     content: '';
     position: absolute;
     top: 10%;
-    right: 0;
+    right: -3%;
     height: 100%;
-    width: 33%;
+    width: 47%;
     -webkit-transform: translateX(25%);
         -ms-transform: translateX(25%);
             transform: translateX(25%);
     opacity: 0.3;
-    background-image: url(../img/m_dispenser_mobile.png);
+    background-image: url(../img/m_dispenser_mobile@2x.png);
     background-repeat: no-repeat;
     background-size: 100% auto; }
 
@@ -2970,10 +2977,10 @@ header {
   height: 100%; }
 
 @media only screen and (max-width: 640px) {
-  .team img + * {
-    -webkit-transform: translateY(-2.4rem);
-        -ms-transform: translateY(-2.4rem);
-            transform: translateY(-2.4rem); } }
+  .team picture + * {
+    -webkit-transform: translateY(-2rem);
+        -ms-transform: translateY(-2rem);
+            transform: translateY(-2rem); } }
 
 @media only screen and (max-width: 640px) {
   .support__container {
