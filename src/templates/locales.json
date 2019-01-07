@@ -119,7 +119,7 @@
       },
       "filling": {
         "title": "Tête de remplissage",
-        "text": "Minimun 2 par pompes, munies de leds et mises en hauteur pour un service de la bière mis en avant."
+        "text": "Minimum 2 par pompe, munies de leds et mises en hauteur pour un service de la bière mis en avant."
       },
       "screen": {
         "title": "Ecran de contrôle",
@@ -135,7 +135,7 @@
       },
       "handle": {
         "title": "Poignets",
-        "text": "Intégrées au meuble bas et conçues pour être hautement résistante. L’assurance de la mobilité en toute sécurité."
+        "text": "Intégrées au meuble bas et conçues pour être hautement résistantes. L’assurance de la mobilité en toute sécurité."
       },
       "wheels": {
         "title": "Roulettes",
@@ -151,7 +151,7 @@
     "list": [
       "Personnalisable",
       "En matière plastique organoleptique",
-      "50 cl ou gradué en 33 / 25 cl",
+      "50 cl ou 25/33 cl",
       "Muni d'un bouchon personnalisable, outil de communication et de collection",
       "Pour tout type de bières et d'événements"
     ]
@@ -162,7 +162,7 @@
     "texts": [
       "Nous avons fait un constat simple : des milliers de litres de bières sont gâchés chaque année par les contraintes d’utilisation de tireuses classiques.",
       "Le tirage d'une bière est complexe et prend du temps, une attente inutile chez vos clients. Une bière à la fois.",
-      "De formation technique et forts de nos expériences, nous avons donc décider de créer Fast and Go, entreprise 100% Française au service de la bière, de vos clients et en lutte constante contre le gaspillage."
+      "De formation technique et forts de nos expériences, nous avons donc décidé de créer Fast and Go, entreprise 100% Française au service de la bière, de vos clients et en lutte constante contre le gaspillage."
     ]
 
   },
@@ -172,8 +172,8 @@
       "title": "En direct",
       "phone": "06 26 34 82 71",
       "phone_link": "tel:+33626348271",
-      "mail": "contact@fastandgo.com",
-      "mail_link": "mailto:contact@fastandgo.com"
+      "mail": "contact@fastandgo.eu",
+      "mail_link": "mailto:contact@fastandgo.eu"
     },
     "social": {
       "title": "Nous suivre",
@@ -189,7 +189,7 @@
       "email": "Email",
       "phone": "Téléphone",
       "message": "Message",
-      "checkbox": "J’accèpte que Fast and Go utilise mes données pour prendre contact avec moi.",
+      "checkbox": "J’accepte que Fast and Go utilise mes données pour prendre contact avec moi.",
       "cta": "Envoyer"
     }
   },

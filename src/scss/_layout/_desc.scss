@@ -177,6 +177,10 @@
         transition: transform 600ms $anim-easing,
           max-height 600ms $anim-easing;
         transition-delay: 250ms;
+
+        img {
+          width: 100%;
+        }
       }
 
       h3,
