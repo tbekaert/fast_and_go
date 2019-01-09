@@ -8,16 +8,11 @@
  * */
 
 export default (({
-  videoId,
-  videoContainer
+  vimeoContainer
 }) => {
-  var tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/iframe_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-  var player;
+  let vimeoPlayer = document.querySelector(`#${vimeoContainer}`);
 
-  window.onYouTubeIframeAPIReady = function () {
+  let setPlayerSize = () => {
     let height = window.innerHeight;
     let width = window.innerHeight * 16 / 9;
 
@@ -26,41 +21,11 @@ export default (({
       height = window.innerWidth * 9 / 16
     }
 
-    player = new YT.Player(videoContainer, {
-      width,
-      height,
-      videoId: videoId,
-      playerVars: {
-        rel: 0,
-        controls: 0,
-        showinfo: 0,
-        iv_load_policy: 3,
-        vq: 'hd1080',
-        cc_load_policy: 1,
-        autoplay: 1,
-        loop: 1,
-        mute: 1
-      },
-      events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
-      }
-    });
+    vimeoPlayer.style.width = `${width}px`;
+    vimeoPlayer.style.height = `${height}px`;
   }
-
-  function onPlayerReady(event) {
-    event.target.playVideo();
-    player.mute();
-  }
-
-  function onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.ENDED) {
-      player.seekTo(0);
-      player.playVideo();
-    }
-  }
-
+  setPlayerSize();
+  window.addEventListener('resize', setPlayerSize);
 })({
-  videoId: '1_SQUOyGLyk',
-  videoContainer: 'youtube-hero'
+  vimeoContainer: 'vimeo-hero'
 });
