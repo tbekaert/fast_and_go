@@ -2557,7 +2557,7 @@ header {
     left: 0;
     overflow: hidden;
     pointer-events: none; }
-    .hero__video iframe {
+    .hero__video iframe, .hero__video video {
       position: absolute;
       top: 50%;
       left: 50%;
